@@ -112,5 +112,6 @@ h2 {
 
 @media (max-width: 1440px) {
   .card {
+    height: 600px;
   }
 }
