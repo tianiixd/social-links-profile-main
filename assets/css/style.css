@@ -7,6 +7,24 @@
   --main-font: "Inter", sans-serif;
 }
 
+/* Light theme */
+[data-theme="light"] {
+  --color-button-bg: hsl(0, 0%, 90%);
+  --color-button-hover: hsl(200, 80%, 50%);
+  --color-text: hsl(0, 0%, 10%);
+  --color-card-bg: hsl(0, 0%, 100%);
+  --color-page-bg: hsl(0, 0%, 95%);
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+  --color-button-bg: hsl(0, 0%, 20%);
+  --color-button-hover: hsl(75, 94%, 57%);
+  --color-text: hsl(0, 0%, 100%);
+  --color-card-bg: hsl(0, 0%, 12%);
+  --color-page-bg: hsl(0, 0%, 8%);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -22,6 +40,28 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+}
+
+.theme-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: var(--color-button-bg);
+  color: var(--color-text);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.theme-btn:hover {
+  background-color: var(--color-button-hover);
+  color: var(--color-page-bg);
 }
 
 .card {
@@ -93,7 +133,7 @@ h2 {
 
   .quote {
     font-size: 12px;
-    font-weight: 4300;
+    font-weight: 300;
   }
 
   .card {
